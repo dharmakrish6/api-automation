@@ -1,0 +1,123 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-21T16:58:56.204Z",
+    "end": "2023-08-21T16:58:56.817Z",
+    "duration": 613,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2bd3e4c6-ea75-4546-801d-0100cce1d765",
+      "title": "",
+      "fullFile": "cypress/e2e/healthapp/create_individual.cy.js",
+      "file": "cypress/e2e/healthapp/create_individual.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d19a64e9-0213-4330-9b6a-cc506c8cc156",
+          "title": "Create Individual Test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create Individual with valid data",
+              "fullTitle": "Create Individual Test suite Create Individual with valid data",
+              "timedOut": null,
+              "duration": 473,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let cusData = individual.createIndividual;\ncusData.RequestInfo.authToken = `${accessToken}`;\ncy.postCall('/individual/v1/_create', cusData).should(response => {\n  expect(response.status).to.eq(202);\n});",
+              "err": {},
+              "uuid": "1f65ebc3-1363-4d77-ab43-eabc9e6a5ed6",
+              "parentUUID": "d19a64e9-0213-4330-9b6a-cc506c8cc156",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create Individual with valid data and invalid auth",
+              "fullTitle": "Create Individual Test suite Create Individual with valid data and invalid auth",
+              "timedOut": null,
+              "duration": 100,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let cusData = individual.createIndividual;\ncusData.RequestInfo.authToken = `invalidtoken`;\ncy.postCall('/household/v1/_create', cusData).should(response => {\n  //Authentication failure should retun 401 but here its 500\n  expect(response.status).to.eq(500);\n});",
+              "err": {},
+              "uuid": "84035b67-48be-4d22-aea5-827113e10cd2",
+              "parentUUID": "d19a64e9-0213-4330-9b6a-cc506c8cc156",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1f65ebc3-1363-4d77-ab43-eabc9e6a5ed6",
+            "84035b67-48be-4d22-aea5-827113e10cd2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 573,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

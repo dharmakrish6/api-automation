@@ -1,0 +1,43 @@
+{
+  "createHousehold": {
+    "RequestInfo": {
+      "authToken": "{{access_token}}"
+    },
+    "Household": {
+      "tenantId": "default",
+      "clientReferenceId": "10abffd3-fa43-417f-9bee-2a58cf201b67",
+      "memberCount": 5,
+      "address": {
+        "clientReferenceId": "1b4aa524-88d2-4559-adc5-bfbb4658ae0f",
+        "tenantId": "default",
+        "doorNo": "123",
+        "latitude": 12.34,
+        "longitude": 123.45,
+        "locationAccuracy": 123.76,
+        "type": "1",
+        "addressLine1": "address",
+        "addressLine2": "Road Number 12",
+        "landmark": "Near Niagara Lake",
+        "city": "Bangalore",
+        "pincode": "1234567",
+        "buildingName": "Alpine Apartments",
+        "street": "test_da0b8ebec5ef",
+        "locality": {
+          "code": "locality code",
+          "name": "locality name"
+        }
+      },
+      "additionalFields": {
+        "schema": "test_e37466be924cjhghjg",
+        "version": 8,
+        "fields": [
+          {
+            "key": "test_12bc5f24692f",
+            "value": "test_bf376bce4c01"
+          }
+        ]
+      },
+      "rowVersion": 0
+    }
+  }
+}

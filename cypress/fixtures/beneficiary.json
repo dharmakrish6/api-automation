@@ -1,0 +1,24 @@
+{
+    "createBeneficiary": {
+        "RequestInfo": {
+            "authToken": "{{access_token}}"
+        },
+        "ProjectBeneficiary": {
+            "clientReferenceId": "31772600-401f-11ee-b6c9-5fc9fff8476b",
+            "tenantId": "default",
+            "projectId": "ffade433-ec22-4b54-9b6a-dd245baf1023",
+            "beneficiaryClientReferenceId": "207eaa80-401f-11ee-b6c9-5fc9fff8476b",
+            "dateOfRegistration": 1692621855296,
+            "additionalFields": {
+                "schema": "registration",
+                "version": 1,
+                "fields": [
+                    {
+                        "key": "key1",
+                        "value": "value1"
+                    }
+                ]
+            }
+        }
+    }
+}
