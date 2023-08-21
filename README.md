@@ -18,6 +18,6 @@ npm install cypress
 npx cypress run --reporter mochawesome
 ```
 
-- Report can be found in the `cypress/results`
+- Report can be found in the `mochawesome-report`
   ![Alt text](sample-report.png?raw=true "Sample Report")
 - Videos can be found in `cypress/videos`
