@@ -19,5 +19,5 @@ npx cypress run --reporter mochawesome
 ```
 
 - Report can be found in the `cypress/results`
-
+  ![Alt text](sample-report.png?raw=true "Sample Report")
 - Videos can be found in `cypress/videos`
