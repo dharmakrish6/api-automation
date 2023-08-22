@@ -16,6 +16,12 @@ npm install cypress
 
 ```bash
 npx cypress run --reporter mochawesome
+
+//Merge all reports
+npx mochawesome-merge ./mochawesome-report/*.json -o output.json
+
+//generate final html report
+npx marge output.json
 ```
 
 - Report can be found in the `mochawesome-report`
