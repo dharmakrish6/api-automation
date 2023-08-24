@@ -11,6 +11,11 @@ npm install
 ```bash
 npm install cypress
 ```
+- Open Cypress for first time to configure cypress
+
+  ```bash
+npx cypress open
+```
 
 - Run our tests with below command
 
