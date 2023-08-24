@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-08-21T16:58:47.294Z",
-    "end": "2023-08-21T16:58:47.956Z",
-    "duration": 662,
+    "start": "2023-08-24T12:17:29.973Z",
+    "end": "2023-08-24T12:17:31.134Z",
+    "duration": 1161,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "83dbdcfb-1867-4386-a879-aac76ae07232",
+      "uuid": "6bbb1fce-f826-4683-b959-826f95f83ab1",
       "title": "",
       "fullFile": "cypress/e2e/healthapp/create_beneficiary.cy.js",
       "file": "cypress/e2e/healthapp/create_beneficiary.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e7950712-8b53-471f-a4ee-0c8d99473d44",
+          "uuid": "4c845b08-877c-4616-b098-b3b6c4f255ca",
           "title": "Create Beneficiary Test suite",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Create Beneficiary with valid data",
               "fullTitle": "Create Beneficiary Test suite Create Beneficiary with valid data",
               "timedOut": null,
-              "duration": 532,
+              "duration": 1033,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "let cusData = beneficiary.createBeneficiary;\ncusData.RequestInfo.authToken = `${accessToken}`;\ncy.postCall('/project/beneficiary/v1/_create', cusData).should(response => {\n  expect(response.status).to.eq(202);\n});",
               "err": {},
-              "uuid": "607f6d16-b820-4e64-9856-115133b93cf5",
-              "parentUUID": "e7950712-8b53-471f-a4ee-0c8d99473d44",
+              "uuid": "f078c62d-1dcc-4183-9ff4-4bb29fb0c043",
+              "parentUUID": "4c845b08-877c-4616-b098-b3b6c4f255ca",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Create Beneficiary with valid data and invalid auth",
               "fullTitle": "Create Beneficiary Test suite Create Beneficiary with valid data and invalid auth",
               "timedOut": null,
-              "duration": 98,
+              "duration": 97,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "let cusData = beneficiary.createBeneficiary;\ncusData.RequestInfo.authToken = `invalidtoken`;\ncy.postCall('/household/v1/_create', cusData).should(response => {\n  //Authentication failure should retun 401 but here its 500\n  expect(response.status).to.eq(500);\n});",
               "err": {},
-              "uuid": "39b217cb-e124-4681-9621-697040a7cda0",
-              "parentUUID": "e7950712-8b53-471f-a4ee-0c8d99473d44",
+              "uuid": "d27c4987-8ed9-42bc-afc7-ba967654dac0",
+              "parentUUID": "4c845b08-877c-4616-b098-b3b6c4f255ca",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "607f6d16-b820-4e64-9856-115133b93cf5",
-            "39b217cb-e124-4681-9621-697040a7cda0"
+            "f078c62d-1dcc-4183-9ff4-4bb29fb0c043",
+            "d27c4987-8ed9-42bc-afc7-ba967654dac0"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 630,
+          "duration": 1130,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -15,6 +15,7 @@ context('Create Beneficiary Test suite', () => {
         cy.postCall('/project/beneficiary/v1/_create', cusData)
             .should((response) => {
                 expect(response.status).to.eq(202)
+                expect(response.body.ProjectBeneficiary.id).contain('PTB-2023')
             })
     })
     it('Create Beneficiary with valid data and invalid auth', () => {

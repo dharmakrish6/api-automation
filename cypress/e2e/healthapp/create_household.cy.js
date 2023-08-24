@@ -1,5 +1,6 @@
 const { access } = require('fs')
-const household = require('../../fixtures/household.json')
+const household = require('../../fixtures/household.json');
+const assert = require('assert');
 context('Register Household Test suite', () => {
     let accessToken;
     before(() => {
@@ -15,6 +16,7 @@ context('Register Household Test suite', () => {
         cy.postCall('/household/v1/_create', cusData)
             .should((response) => {
                 expect(response.status).to.eq(202)
+                expect(response.body.ResponseInfo.status).to.eq("successful")
             })
     })
     it('create household with valid data and invalid auth', () => {

@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-08-21T16:58:52.089Z",
-    "end": "2023-08-21T16:58:52.607Z",
-    "duration": 518,
+    "start": "2023-08-24T12:17:35.515Z",
+    "end": "2023-08-24T12:17:36.232Z",
+    "duration": 717,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8b86ba14-df22-4d29-96e4-3de9d7431950",
+      "uuid": "85fa62ae-ab70-498a-97f0-1c11c84694bf",
       "title": "",
       "fullFile": "cypress/e2e/healthapp/create_household.cy.js",
       "file": "cypress/e2e/healthapp/create_household.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "66818f25-43fa-41b9-8009-cfe474d0b6b1",
+          "uuid": "44ac6ce5-07cd-4aa7-8b55-36d698f21c9e",
           "title": "Register Household Test suite",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "create household with valid data",
               "fullTitle": "Register Household Test suite create household with valid data",
               "timedOut": null,
-              "duration": 400,
+              "duration": 592,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "let cusData = household.createHousehold;\ncusData.RequestInfo.authToken = `${accessToken}`;\ncy.postCall('/household/v1/_create', cusData).should(response => {\n  expect(response.status).to.eq(202);\n});",
               "err": {},
-              "uuid": "a20daf87-36f6-43d7-b6ec-8eede569e2af",
-              "parentUUID": "66818f25-43fa-41b9-8009-cfe474d0b6b1",
+              "uuid": "1efe97d8-d1f6-4129-9a48-cf1a2c970a43",
+              "parentUUID": "44ac6ce5-07cd-4aa7-8b55-36d698f21c9e",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "create household with valid data and invalid auth",
               "fullTitle": "Register Household Test suite create household with valid data and invalid auth",
               "timedOut": null,
-              "duration": 87,
+              "duration": 79,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "let cusData = household.createHousehold;\ncusData.RequestInfo.authToken = `invalidtoken`;\ncy.postCall('/household/v1/_create', cusData).should(response => {\n  //Authentication failure should retun 401 but here its 500\n  expect(response.status).to.eq(500);\n});",
               "err": {},
-              "uuid": "51c91456-ee73-4852-9db8-5b6a934c429c",
-              "parentUUID": "66818f25-43fa-41b9-8009-cfe474d0b6b1",
+              "uuid": "d9b042bf-3964-41ca-9208-779986bc739d",
+              "parentUUID": "44ac6ce5-07cd-4aa7-8b55-36d698f21c9e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a20daf87-36f6-43d7-b6ec-8eede569e2af",
-            "51c91456-ee73-4852-9db8-5b6a934c429c"
+            "1efe97d8-d1f6-4129-9a48-cf1a2c970a43",
+            "d9b042bf-3964-41ca-9208-779986bc739d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 487,
+          "duration": 671,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

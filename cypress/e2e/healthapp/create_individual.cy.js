@@ -15,6 +15,7 @@ context('Create Individual Test suite', () => {
         cy.postCall('/individual/v1/_create', cusData)
             .should((response) => {
                 expect(response.status).to.eq(202)
+                expect(response.body.Individual.individualId).contain("IND-2023")
             })
     })
     it('Create Individual with valid data and invalid auth', () => {

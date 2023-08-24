@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-08-21T16:58:56.204Z",
-    "end": "2023-08-21T16:58:56.817Z",
-    "duration": 613,
+    "start": "2023-08-24T12:17:41.215Z",
+    "end": "2023-08-24T12:17:42.028Z",
+    "duration": 813,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "2bd3e4c6-ea75-4546-801d-0100cce1d765",
+      "uuid": "572fff7a-d67d-48a0-9031-a54b10e991ca",
       "title": "",
       "fullFile": "cypress/e2e/healthapp/create_individual.cy.js",
       "file": "cypress/e2e/healthapp/create_individual.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d19a64e9-0213-4330-9b6a-cc506c8cc156",
+          "uuid": "ddd201e7-4de0-4bf8-a5ae-97edc820ec7d",
           "title": "Create Individual Test suite",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Create Individual with valid data",
               "fullTitle": "Create Individual Test suite Create Individual with valid data",
               "timedOut": null,
-              "duration": 473,
+              "duration": 656,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "let cusData = individual.createIndividual;\ncusData.RequestInfo.authToken = `${accessToken}`;\ncy.postCall('/individual/v1/_create', cusData).should(response => {\n  expect(response.status).to.eq(202);\n});",
               "err": {},
-              "uuid": "1f65ebc3-1363-4d77-ab43-eabc9e6a5ed6",
-              "parentUUID": "d19a64e9-0213-4330-9b6a-cc506c8cc156",
+              "uuid": "347b378b-d1e7-4bf5-8348-465bf770060f",
+              "parentUUID": "ddd201e7-4de0-4bf8-a5ae-97edc820ec7d",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Create Individual with valid data and invalid auth",
               "fullTitle": "Create Individual Test suite Create Individual with valid data and invalid auth",
               "timedOut": null,
-              "duration": 100,
+              "duration": 115,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "let cusData = individual.createIndividual;\ncusData.RequestInfo.authToken = `invalidtoken`;\ncy.postCall('/household/v1/_create', cusData).should(response => {\n  //Authentication failure should retun 401 but here its 500\n  expect(response.status).to.eq(500);\n});",
               "err": {},
-              "uuid": "84035b67-48be-4d22-aea5-827113e10cd2",
-              "parentUUID": "d19a64e9-0213-4330-9b6a-cc506c8cc156",
+              "uuid": "5c26397f-da89-4d9c-a5ae-f4b16af5347c",
+              "parentUUID": "ddd201e7-4de0-4bf8-a5ae-97edc820ec7d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1f65ebc3-1363-4d77-ab43-eabc9e6a5ed6",
-            "84035b67-48be-4d22-aea5-827113e10cd2"
+            "347b378b-d1e7-4bf5-8348-465bf770060f",
+            "5c26397f-da89-4d9c-a5ae-f4b16af5347c"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 573,
+          "duration": 771,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
